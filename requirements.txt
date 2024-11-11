@@ -1,1 +1,6 @@
 Flask==3.0.3
+flask = "*"
+flask-jwt-extended = "*"
+flask-sqlalchemy = "*"
+flask-cors = "*"
+python-dotenv = "*"
