@@ -10,13 +10,13 @@ from datetime import timedelta
 # from hmac import compare_digest
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
+CORS(app, origins=["http://localhost:5173", "https://reactprofiling.vercel.app/"])
 load_dotenv()
 
 
 # Setup the Flask-JWT-Extended extension
-app.config["JWT_SECRET_KEY"] = os.getenv('JWT_SECRET_KEY')
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv('SQLALCHEMY_DATABASE_URI')
+app.config["JWT_SECRET_KEY"] = "vjJKJKv67gvJKJHHnkmkjhYYUUh7t8jjk"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///profile.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=7)
 
@@ -137,6 +137,7 @@ def user():
 #     return "my name is Chijiuba Onyedikachukwu", 200
 
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
+if __name__ == "__main__":
+    app.run()
+
 
