@@ -10,7 +10,7 @@ from datetime import timedelta
 # from hmac import compare_digest
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
+CORS(app, origins=["http://localhost:5173", "https://reactprofiling.vercel.app/"])
 load_dotenv()
 
 
@@ -137,6 +137,6 @@ def user():
 #     return "my name is Chijiuba Onyedikachukwu", 200
 
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()
 
